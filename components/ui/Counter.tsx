@@ -13,7 +13,7 @@ interface CounterProps {
 
 export function Counter({ value, duration = 1500, suffix = "", className = "" }: CounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true });
   const count = useCountUp(value, duration, isInView);
 
   return (
